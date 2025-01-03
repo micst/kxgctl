@@ -1,0 +1,70 @@
+# This file belongs to a kxgctl configuration set.
+# For more details see https://github.com/micst/kgxctl
+#
+# This file describes a kxgctl template collection.
+# See section "Template files" in documentation.
+#
+templates:
+  - template_name: heating
+    description: "FBH Heizung Steuerug mit MDT"
+    device_name: Heizung
+    bindings:
+      - attribute_name: craft
+        attribute_key: craft-heating
+    addresses:
+      - name: Sollwert
+        description: "in"
+        datatype: "DPST-9-1"
+        security: ""
+        central: false
+        bindings:
+          - attribute_name: function
+            attribute_key: function-actuating
+      - name: StatusSollwert
+        description: "out"
+        datatype: "DPST-9-1"
+        security: ""
+        central: false
+        bindings:
+          - attribute_name: function
+            attribute_key: function-status
+      - name: SollwertVerschiebung
+        description: "in"
+        datatype: "DPST-9-2"
+        security: ""
+        central: false
+        bindings:
+          - attribute_name: function
+            attribute_key: function-actuating
+      - name: StatusSollwertVerschiebung
+        description: "out"
+        datatype: "DPST-9-2"
+        security: ""
+        central: false
+        bindings:
+          - attribute_name: function
+            attribute_key: function-status
+      - name: Betriebsartvorwahl
+        description: "in"
+        datatype: "DPST-20-102"
+        security: ""
+        central: false
+        bindings:
+          - attribute_name: function
+            attribute_key: function-actuating
+      - name: StatusBetriebsart
+        description: "out"
+        datatype: "DPST-20-102"
+        security: ""
+        central: false
+        bindings:
+          - attribute_name: function
+            attribute_key: function-status
+      - name: StatusDiagnose
+        description: "out"
+        datatype: "DPST-16-1"
+        security: ""
+        central: false
+        bindings:
+          - attribute_name: function
+            attribute_key: function-diagnosis

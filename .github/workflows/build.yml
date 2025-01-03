@@ -1,0 +1,28 @@
+name: Build
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Go
+      uses: actions/setup-go@v4
+      with:
+        go-version: '1.23.4'
+
+    - name: Generate
+      run: go generate .
+
+    - name: Build
+      run: GOOS=windows GOARCH=amd64 go build .
+
+    - name: Upload kxgctl
+      uses: actions/upload-artifact@v4
+      with:
+        name: kxgctl.exe
+        path: kxgctl.exe

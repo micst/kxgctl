@@ -1,0 +1,35 @@
+# This file belongs to a kxgctl configuration set.
+# For more details see https://github.com/micst/kgxctl
+#
+# This file describes a kxgctl template collection.
+# See section "Template files" in documentation.
+#
+templates:
+  - template_name: temperature
+    description: ""
+    bindings:
+      - attribute_name: craft
+        attribute_key: craft-sensors
+    addresses:
+      - name: Temperatur
+        description: "out"
+        datatype: "DPST-"
+        security: ""
+        central: false
+        bindings:
+          - attribute_name: function
+            attribute_key: function-status
+  - template_name: humidity
+    description: ""
+    bindings:
+      - attribute_name: craft
+        attribute_key: craft-sensors
+    addresses:
+      - name: Luftfeuchtigkeit
+        description: "out"
+        datatype: "DPST-"
+        security: ""
+        central: false
+        bindings:
+          - attribute_name: function
+            attribute_key: function-status

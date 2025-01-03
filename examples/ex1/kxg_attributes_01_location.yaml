@@ -1,0 +1,62 @@
+# This file belongs to a kxgctl configuration set.
+# For more details see https://github.com/micst/kgxctl
+#
+# This file describes a kxgctl attribute.
+# See section "Attribute files" in documentation.
+#
+name: location
+
+values:
+  - id: location-central
+    text: Central
+    description: "Central entities that do not match any other location."
+    icon: mdi:house
+    ha_name: Central
+    #middle_groups:
+    #  - name: craft
+    #    id: group-function-middle
+    #  - name: function
+    #    id: group-function-middle
+  - id: location-f0
+    text: F0
+    description: "Entities on ground floor which do not belong to any room"
+  - id: location-living
+    text: Living
+    description: "Entities in living room"
+    parent: location-f0
+  - id: location-f1
+    text: F1
+    description: "Entities on upper floor which do not belong to any room"
+  - id: location-sleeping
+    text: Sleeping
+    description: "Entities in sleeping room"
+    parent: location-f1
+  - id: location-bath
+    text: Bath
+    description: "Entities in bath room"
+    parent: location-f1
+  - id: location-garden
+    text: Garden
+    description: "Entities in garden"
+    parent: location-out
+
+groups:
+  - id: group-location-root
+    members:
+      - id: location-central
+      - id: location-f0
+      - id: location-living
+      - id: location-f1
+      - id: location-sleeping
+      - id: location-bath
+  - id: group-location-middle
+    members:
+      - id: location-central
+      - id: location-f0
+      - id: location-f1
+
+middle_groups:
+  - name: craft
+    id: group-craft-middle
+  - name: function
+    id: group-function-middle

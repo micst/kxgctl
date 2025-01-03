@@ -1,0 +1,49 @@
+# This file belongs to a kxgctl configuration set.
+# For more details see https://github.com/micst/kgxctl
+#
+# This file describes a kxgctl template collection.
+# See section "Template files" in documentation.
+#
+templates:
+  - template_name: light
+    bindings:
+      - attribute_name: craft
+        attribute_key: craft-light
+    addresses:
+      - name: "Schalten"
+        description: "in"
+        datatype: "DPST-1-1"
+        security: ""
+        central: false
+        bindings:
+          - attribute_name: function
+            attribute_key: function-actuating
+      - name: "Status"
+        description: "out"
+        datatype: "DPST-1-11"
+        security: ""
+        central: false
+        bindings:
+          - attribute_name: function
+            attribute_key: function-status
+      - name: "Sperre"
+        description: "out"
+        datatype: "DPST-1-3"
+        security: ""
+        central: false
+        bindings:
+          - attribute_name: function
+            attribute_key: function-actuating
+  - template_name: contact
+    bindings:
+      - attribute_name: craft
+        attribute_key: craft-contacts
+    addresses:
+      - name: "Kontakt"
+        description: "out"
+        datatype: "DPST-1-1"
+        security: ""
+        central: false
+        bindings:
+          - attribute_name: function
+            attribute_key: function-status

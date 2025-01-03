@@ -1,0 +1,83 @@
+# This file belongs to a kxgctl configuration set.
+# For more details see https://github.com/micst/kgxctl
+#
+# This file describes a kxgctl attribute.
+# See section "Attribute files" in documentation.
+#
+name: function
+
+values:
+  - id: function-central
+    text: "Central"
+  - id: function-actuating
+    text: "Actuators"
+  - id: function-status
+    text: "Status"
+  - id: function-alarms
+    text: "Alarms"
+  - id: function-diagnosis
+    text: "Diagnosis"
+
+groups:
+  - id: group-function-middle
+    members:
+      - id: function-central
+      - id: function-actuating
+      - id: function-status
+      - id: function-alarms
+      - id: function-diagnosis
+  - id: group-function-middle-central
+    members:
+      - id: function-central
+      - id: function-actuating
+      - id: function-status
+      - id: function-alarms
+      - id: function-diagnosis
+  - id: group-function-middle-sensors
+    members:
+      - id: function-central
+      - id: function-status
+      - id: function-alarms
+      - id: function-diagnosis
+  - id: group-function-middle-switching
+    members:
+      - id: function-central
+      - id: function-actuating
+      - id: function-status
+      - id: function-alarms
+      - id: function-diagnosis
+  - id: group-function-middle-contacts
+    members:
+      - id: function-central
+      - id: function-status
+      - id: function-diagnosis
+  - id: group-function-middle-cover
+    members:
+      - id: function-central
+      - id: function-actuating
+      - id: function-status
+      - id: function-alarms
+      - id: function-diagnosis
+  - id: group-function-middle-light
+    members:
+      - id: function-central
+      - id: function-actuating
+      - id: function-status
+      - id: function-alarms
+      - id: function-diagnosis
+  - id: group-function-middle-heating
+    members:
+      - id: function-central
+      - id: function-actuating
+      - id: function-status
+      - id: function-alarms
+      - id: function-diagnosis
+  - id: group-function-middle-reserved
+    members:
+      - id: function-central
+
+middle_groups:
+  - name: location
+    id: group-location-middle
+  - name: craft
+    id: group-craft-middle

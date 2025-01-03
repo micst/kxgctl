@@ -1,0 +1,18 @@
+# This file belongs to a kxgctl configuration set.
+# For more details see https://github.com/micst/kgxctl
+#
+# This file describes a kxgctl context collection.
+# See section "Context files" in documentation.
+#
+contexts:
+  - name: location-craft
+    main_attribute: location
+    middle_attribute: craft
+    root_group: group-location-root
+    location_attribute: location
+  - name: craft-function
+    main_attribute: craft
+    middle_attribute: function
+    root_group: group-craft-root
+    location_attribute: location
+current-context: location-craft

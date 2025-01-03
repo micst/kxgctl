@@ -1,0 +1,7 @@
+*.exe
+*.yaml
+*.xml
+
+/kxg/tag.go
+/completion.ps1
+.vscode

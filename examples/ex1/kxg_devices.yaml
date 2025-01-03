@@ -1,0 +1,44 @@
+# This file belongs to a kxgctl configuration set.
+# For more details see https://github.com/micst/kgxctl
+#
+# This file describes a kxgctl device collection.
+# See section "Device files" in documentation.
+#
+groups:
+
+  - bindings:
+      - attribute_name: location
+        attribute_key: location-f0
+    devices:
+      - template_name: contact
+        start_address: 1
+        device_name: TürenUndFenster
+      - template_name: contact
+        device_name: Türen
+      - template_name: contact
+        device_name: OhneHaustüre
+      - template_name: light
+        device_name: LichtGruppe
+        start_address: 1
+
+  - bindings:
+      - attribute_name: location
+        attribute_key: location-living
+    devices:
+      - template_name: heating
+        start_address: 1
+      - template_name: raffstore
+        start_address: 1
+        device_name: RaffstoreL
+      - template_name: raffstore
+        start_address: 40
+        device_name: RaffstoreR
+      - template_name: light
+        device_name: DeckenLicht
+        start_address: 1
+      - template_name: contact
+        device_name: Terrasse
+        start_address: 1
+      - template_name: temperature
+        device_name: HA
+        start_address: 1

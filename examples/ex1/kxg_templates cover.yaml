@@ -1,0 +1,80 @@
+# This file belongs to a kxgctl configuration set.
+# For more details see https://github.com/micst/kgxctl
+#
+# This file describes a kxgctl template collection.
+# See section "Template files" in documentation.
+#
+templates:
+  - template_name: raffstore
+    description: "Steuerung von Raffstores mit MDT Aktor"
+    device_name: Fenster
+    bindings:
+      - attribute_name: craft
+        attribute_key: craft-cover
+    addresses:
+      - id: "AufAb"
+        name: "AufAb"
+        description: "in"
+        datatype: "DPST-1-8"
+        security: ""
+        central: false
+        bindings:
+          - attribute_name: function
+            attribute_key: function-actuating
+      - id: Stopp
+        name: Stopp
+        description: "in"
+        datatype: "DPST-1-7"
+        security: ""
+        central: false
+        bindings:
+          - attribute_name: function
+            attribute_key: function-actuating
+      - id: RolloPosition
+        name: RolloPosition
+        description: "in"
+        datatype: "DPST-5-1"
+        security: ""
+        bindings:
+          - attribute_name: function
+            attribute_key: function-actuating
+      - id: LamellenPosition
+        name: LamellenPosition
+        description: "in"
+        datatype: "DPST-5-1"
+        security: ""
+        bindings:
+          - attribute_name: function
+            attribute_key: function-actuating
+      - id: StatusRolloPosition
+        name: StatusRolloPosition
+        description: "out"
+        datatype: "DPST-5-1"
+        security: ""
+        bindings:
+          - attribute_name: function
+            attribute_key: function-status
+      - id: StatusLamellenPosition
+        name: StatusLamellenPosition
+        description: "out"
+        datatype: "DPST-5-1"
+        security: ""
+        bindings:
+          - attribute_name: function
+            attribute_key: function-status
+      - id: AlarmWind
+        name: AlarmWind
+        description: "in"
+        datatype: "DPST-1-5"
+        security: ""
+        bindings:
+          - attribute_name: function
+            attribute_key: function-alarms
+      - id: StatusDiagnose
+        name: StatusDiagnose
+        description: "out"
+        datatype: "DPST-16-0"
+        security: ""
+        bindings:
+          - attribute_name: function
+            attribute_key: function-diagnosis

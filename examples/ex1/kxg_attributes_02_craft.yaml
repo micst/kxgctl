@@ -1,0 +1,92 @@
+# This file belongs to a kxgctl configuration set.
+# For more details see https://github.com/micst/kgxctl
+#
+# This file describes a kxgctl attribute.
+# See section "Attribute files" in documentation.
+#
+name: craft
+
+values:
+  - id: craft-central
+    text: Central
+    description: "Central entities that are used anywhere."
+    middle_groups:
+      - name: function
+        id: group-function-middle-central
+    
+  - id: craft-sensors
+    text: Sensors
+    description: "Temperature, humidity, C02, ..."
+    middle_groups:
+      - name: function
+        id: group-function-middle-sensors
+    
+  - id: craft-switching
+    text: Switching
+    description: "Plugs, ..."
+    middle_groups:
+      - name: function
+        id: group-function-middle-switching
+    
+  - id: craft-contacts
+    text: Contacts
+    description: "Windows, doors, ..."
+    middle_groups:
+      - name: function
+        id: group-function-middle-contacts
+    
+  - id: craft-cover
+    text: Cover
+    description: "Jalousies, ..."
+    middle_groups:
+      - name: function
+        id: group-function-middle-cover
+    
+  - id: craft-light
+    text: Light
+    description: "Everything about lights."
+    middle_groups:
+      - name: function
+        id: group-function-middle-light
+    
+  - id: craft-heating
+    text: Heating
+    description: "Heating control"
+    middle_groups:
+      - name: function
+        id: group-function-middle-heating
+    
+  - id: craft-reserved
+    text: Reserved
+    description: "Reserved for ... whatever"
+    middle_groups:
+      - name: function
+        id: group-function-middle-reserved
+
+groups:
+  - id: group-craft-root
+    members:
+      - id: craft-central
+      - id: craft-sensors
+      - id: craft-switching
+      - id: craft-contacts
+      - id: craft-cover
+      - id: craft-light
+      - id: craft-heating
+      - id: craft-reserved
+  - id: group-craft-middle
+    members:
+      - id: craft-central
+      - id: craft-sensors
+      - id: craft-switching
+      - id: craft-contacts
+      - id: craft-cover
+      - id: craft-light
+      - id: craft-heating
+      - id: craft-reserved
+
+middle_groups:
+  - name: location
+    id: group-location-middle
+  - name: function
+    id: group-function-middle
